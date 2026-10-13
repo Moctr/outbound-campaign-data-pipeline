@@ -1,0 +1,25 @@
+{
+  "dataset": "UCI Bank Marketing bank-full.csv",
+  "source_sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+  "source_records": 45211,
+  "processed_records": 45211,
+  "rejected_records": 0,
+  "exact_duplicate_rows_observed": 0,
+  "duplicate_rows_removed": 0,
+  "unknown_value_counts_by_field": {
+    "contact": 13020,
+    "poutcome": 36959,
+    "education": 1857,
+    "job": 288
+  },
+  "subscription_count": 5289,
+  "subscription_rate_pct": 11.7,
+  "avg_call_duration_seconds": 258.16,
+  "month_is_category_not_year_month": true,
+  "limitations": [
+    "No agent identifier",
+    "No unique customer identifier",
+    "No year or timestamp field in bank-full.csv",
+    "Call duration is known only after contact and should not be used as a pre-call predictor"
+  ]
+}

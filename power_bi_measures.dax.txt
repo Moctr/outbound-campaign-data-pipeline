@@ -1,0 +1,22 @@
+# DAX measures for a Power BI report built on FactCampaignRecord
+
+Campaign Records = COUNTROWS(FactCampaignRecord)
+
+Subscriptions = SUM(FactCampaignRecord[subscribed_term_deposit])
+
+Subscription Rate = DIVIDE([Subscriptions], [Campaign Records])
+
+Average Last Call Duration (sec) = AVERAGE(FactCampaignRecord[call_duration_seconds])
+
+Average Campaign Contact Number = AVERAGE(FactCampaignRecord[campaign_contact_number])
+
+Previously Contacted Records = SUM(FactCampaignRecord[previously_contacted])
+
+Previously Contacted Rate = DIVIDE([Previously Contacted Records], [Campaign Records])
+
+## Report notes
+- Format Subscription Rate and Previously Contacted Rate as percentages.
+- Label duration as last-call duration; it is observed after the call.
+- Sort month category with a month-number lookup, but do not use as a dated trend because this source has no year.
+- Avoid inferring agent performance: no agent ID exists in the source.
+
